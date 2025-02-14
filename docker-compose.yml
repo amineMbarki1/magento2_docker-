@@ -7,6 +7,8 @@ services:
       - ./magento2:/var/www/html/magento2
     ports:
       - "9000:9000"
+    extra_hosts:
+      - host.docker.internal:host-gateway
 
   server:
     image: nginx:latest
